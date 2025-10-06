@@ -1,0 +1,27 @@
+{
+  "name": "web-craft-solutions",
+  "version": "1.0.0",
+  "description": "Professional web development portfolio for Web Craft Solutions - Targeting U.S. businesses",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "web-development",
+    "portfolio",
+    "us-business",
+    "web-design",
+    "ecoshop",
+    "web-craft-solutions"
+  ],
+  "author": "Web Craft Solutions",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

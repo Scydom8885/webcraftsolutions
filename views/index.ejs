@@ -1,0 +1,416 @@
+<%- include('partials/header') %>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>
+                        Web & App Ideas
+                        <span>for Business</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Let's turn your ideas into action. From concept to launch - custom development with
+     module-based pricing and detailed feature breakdowns. Delivered on schedule.
+                    </p>
+                    
+                    <!-- <div class="trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Mobile Responsive</span>
+                        </div>
+                       
+                        <div class="trust-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Project Timeline</span>
+                        </div>
+    <div class="trust-badge">
+        <i class="fas fa-mobile-alt"></i>
+        <span>iOS & Android Development</span>
+    </div>
+    <div class="trust-badge">
+        <i class="fas fa-code"></i>
+        <span>Source Code Ownership</span>
+    </div>
+    <div class="trust-badge">
+        <i class="fas fa-calendar-check"></i>
+        <span>Weekly Progress Updates</span>
+    </div>
+    <div class="trust-badge">
+        <i class="fas fa-shield-alt"></i>
+        <span>30-Day Bug Fix Guarantee</span>
+    </div>
+</div> -->
+                    
+                    <div class="hero-cta-group">
+                        <a href="#why" class="btn btn-primary">
+                            <i class="fas fa-briefcase"></i>
+                            Why Choose Us
+                        </a>
+                        <a href="https://wa.me/60187806530?text=Hi%20WebCraft%20Solutions!%20I'd%20like%20to%20get%20a%20quotation%20for%20" class="btn btn-secondary">
+                            <i class="fas fa-calendar"></i>
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="hero-image-placeholder">
+                        <img src="/images/hero.png">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-description">
+                Full-stack development solutions for your business needs
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <!-- Web Application -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web App</h3>
+            </div>
+
+            <!-- Mobile Apps -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile App</h3>
+            </div>
+
+            <!-- Website Development -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Website</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+ <!-- Why Choose Us -->
+    <section class="why-choose-section" id="why">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Advantages</p>
+                <h2 class="section-title">Why Choose Us?</h2>
+                <p class="section-description">
+                    Custom Solutions - Tailored web and mobile applications built to fit your unique business needs and processes.
+                </p>
+            </div>
+            
+            <div class="why-choose-grid">
+                
+                
+                <div class="benefit-item">
+                    <div class="benefit-title">
+                        <i class="fas fa-comments"></i>Progress Updates
+                    </div>
+                    <p class="benefit-description">
+                        Clear project timeline with regular progress updates . You know exactly where your project stands.
+                    </p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-title">
+                        <i class="fa-solid fa-comments-dollar"></i> Risk-Free Payments
+                    </div>
+                    <p class="benefit-description">
+                        Pay by milestones that align with project stages tied to working features you can test.
+                    </p>
+                </div>
+
+                <div class="benefit-item">
+                <div class="benefit-title">
+                    <i class="fas fa-code"></i> Source Code Ownership
+                </div>
+                <p class="benefit-description">
+                    Complete source code and database delivered after final payment. You own everything.
+                </p>
+            </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-title">
+                        <i class="fas fa-shield-alt"></i> 30-Day Bug Fix 
+                    </div>
+                    <p class="benefit-description">
+                        Free bug fixes and technical support for 30 days after delivery. Support covers functionality issues.
+                    </p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-title">
+                        <i class="fas fa-graduation-cap"></i> Training Session
+                    </div>
+                    <p class="benefit-description">
+                        Admin portal training provided within 7 days of handover. You'll know how to manage your system.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <!-- <div class="section-header">
+                <p class="section-subtitle">Portfolio</p>
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-description">
+                    Swipe to browse through our projects
+                </p>
+            </div> -->
+
+            <!-- Portfolio Gallery - Horizontal Scroll -->
+            <div class="portfolio-gallery">
+                <div class="portfolio-gallery-container">
+                    <% portfolioProjects.forEach(project => { %>
+                        <div class="portfolio-item">
+                            <div class="portfolio-item-image">
+                                <img src="<%= project.images.hero %>" alt="<%= project.title %>">
+                            </div>
+                            <div class="portfolio-item-info">
+                                <span class="portfolio-badge"><%= project.category %></span>
+                                <h3><%= project.title %></h3>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+
+                <!-- Scroll indicators -->
+                <div class="portfolio-scroll-indicators">
+                    <% portfolioProjects.forEach((project, index) => { %>
+                        <div class="scroll-dot" data-index="<%= index %>"></div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Process Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Our Process</p>
+                <h2 class="section-title">How We Work</h2>
+                <p class="section-description">
+                    5 steps approach focused on quality delivery to keep your project organized and moving forward. </p>
+            </div>
+        
+        <div class="process-grid">
+            <!-- Step 1 -->
+            <div style="text-align: center;">
+                <div class="process-icon process-icon-blue">1</div>
+                <h3 style="color: var(--gray-800); margin-bottom: 0.5rem;">Discuss</h3>
+                <p style="color: var(--gray-600); font-size: 0.9rem;">
+                    We talk about your project requirements and goals
+                </p>
+            </div>
+            
+            <!-- Step 2 -->
+            <div style="text-align: center;">
+                <div class="process-icon process-icon-blue">2</div>
+                <h3 style="color: var(--gray-800); margin-bottom: 0.5rem;">Plan</h3>
+                <p style="color: var(--gray-600); font-size: 0.9rem;">
+                    We create a project's timeline with milestones
+                </p>
+            </div>
+            
+            <!-- Step 3 -->
+            <div style="text-align: center;">
+                <div class="process-icon process-icon-blue">3</div>
+                <h3 style="color: var(--gray-800); margin-bottom: 0.5rem;">Build</h3>
+                <p style="color: var(--gray-600); font-size: 0.9rem;">
+                    Development with regular updates and previews
+                </p>
+            </div>
+            
+            <!-- Step 4 -->
+            <div style="text-align: center;">
+                <div class="process-icon process-icon-blue">4</div>
+                <h3 style="color: var(--gray-800); margin-bottom: 0.5rem;">Test</h3>
+                <p style="color: var(--gray-600); font-size: 0.9rem;">
+                    Thorough testing to ensure everything works perfectly
+                </p>
+            </div>
+            
+            <!-- Step 5 -->
+            <div style="text-align: center;">
+                <div class="process-icon process-icon-green">
+                        <i class="fas fa-check"></i>
+                    </div>
+                <h3 style="color: var(--gray-800); margin-bottom: 0.5rem;">Launch</h3>
+                <p style="color: var(--gray-600); font-size: 0.9rem;">
+                    Go live with training and 30 days of support.
+                </p>
+            </div>
+        </div>
+    </div>    
+    </section>
+
+   <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>
+                    <!-- Let's build something amazing together! -->
+                   Get a detailed quotation with feature breakdown and pricing - no pushy sales.
+                </p>
+                 <div class="cta-buttons">
+                <a href="https://wa.me/60187806530?text=Hi%20WebCraft%20Solutions!%20I'd%20like%20to%20get%20a%20quotation%20for%20" class="btn btn-white">
+                    <i class="fab fa-whatsapp"></i>
+                    Get Free Quotation
+                </a>
+                <!-- <a href="/portfolio" class="btn btn-secondary" style="background: transparent; border: 2px solid white; color: white;">
+                    <i class="fas fa-briefcase"></i>
+                    View Our Work
+                </a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   
+
+  <%- include('partials/footer') %>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Portfolio horizontal scroll indicators
+        const portfolioContainer = document.querySelector('.portfolio-gallery-container');
+        const scrollDots = document.querySelectorAll('.scroll-dot');
+
+        if (portfolioContainer && scrollDots.length > 0) {
+            // Update active dot based on scroll position
+            portfolioContainer.addEventListener('scroll', function() {
+                const scrollLeft = this.scrollLeft;
+                const itemWidth = this.querySelector('.portfolio-item').offsetWidth + 20; // actual width + gap
+                const activeIndex = Math.round(scrollLeft / itemWidth);
+
+                scrollDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === activeIndex);
+                });
+            });
+
+            // Click dot to scroll to item
+            scrollDots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    const itemWidth = portfolioContainer.querySelector('.portfolio-item').offsetWidth + 20; // actual width + gap
+                    portfolioContainer.scrollTo({
+                        left: index * itemWidth,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Set first dot as active initially
+            if (scrollDots[0]) {
+                scrollDots[0].classList.add('active');
+            }
+        }
+
+        // Entrance Animations on Scroll
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe hero image
+        const heroImage = document.querySelector('.hero-image img');
+        if (heroImage) observer.observe(heroImage);
+
+        // Observe service icons with stagger
+        const serviceIcons = document.querySelectorAll('.service-icon');
+        serviceIcons.forEach((icon, index) => {
+            icon.style.animationDelay = `${index * 0.15}s`;
+            observer.observe(icon);
+        });
+
+        // Observe benefit items with stagger
+        const benefitItems = document.querySelectorAll('.benefit-item');
+        benefitItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+            observer.observe(item);
+        });
+
+        // Observe process steps with sequential stagger
+        const processSteps = document.querySelectorAll('.process-grid > div');
+        processSteps.forEach((step, index) => {
+            const icon = step.querySelector('.process-icon');
+            const title = step.querySelector('h3');
+            const description = step.querySelector('p');
+
+            // Base delay for each step
+            const baseDelay = index * 0.2;
+
+            if (icon) {
+                icon.style.animationDelay = `${baseDelay}s`;
+                observer.observe(icon);
+            }
+
+            if (title) {
+                title.style.animationDelay = `${baseDelay + 0.15}s`;
+                observer.observe(title);
+            }
+
+            if (description) {
+                description.style.animationDelay = `${baseDelay + 0.25}s`;
+                observer.observe(description);
+            }
+        });
+    </script>
+</body>
+</html>

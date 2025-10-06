@@ -1,0 +1,291 @@
+<%- include('partials/header') %>
+    <!-- Portfolio Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="text-center">
+                <p class="section-subtitle">Our Work</p>
+                <h1>Portfolio of Success Stories</h1>
+                <p style="font-size: 20px; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
+                    Real projects with real results. See how we've helped businesses 
+                    across worldwide to transform their online presence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Replace entire portfolio grid section with this -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+    
+    <!-- Item 1: Braised Pork King -->
+    <div class="portfolio-card">
+        <div class="portfolio-image">
+            <div class="image-label" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <i class="fas fa-utensils" style="font-size: 48px; margin-bottom: 16px; color: white;"></i>
+                <p style="color: white;"><strong>Food Ordering System</strong></p>
+                <p style="color: rgba(255,255,255,0.9);">Live Project</p>
+            </div>
+        </div>
+        
+        <div class="portfolio-content">
+            <div class="portfolio-header">
+                <div>
+                    <span class="portfolio-category">Web Application</span>
+                    <h3 class="portfolio-title">Braised Pork King Food Ordering System</h3>
+                </div>
+            </div>
+            
+            <p class="portfolio-description">
+                Complete food ordering and kitchen display system for restaurant operations. Custom-built web application with real-time order management.
+            </p>
+            
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--gray-600);">
+                    <div>
+                        <i class="fas fa-code" style="color: var(--primary-blue); margin-right: 4px;"></i>
+                        Full-Stack Development
+                    </div>
+                    <div>
+                        <i class="fas fa-check-circle" style="color: var(--success-green); margin-right: 4px;"></i>
+                        Live & Operating
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-footer" style="border-top: none; padding-top: 0;">
+                <a href="https://wa.me/60187806530?text=Hi!%20I'd%20like%20to%20see%20the%20Braised%20Pork%20King%20project%20details" class="btn btn-primary" style="width: 100%;">
+                    Request Project Details
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Item 2: Equipment Rental Mobile App -->
+    <div class="portfolio-card">
+        <div class="portfolio-image">
+            <div class="image-label" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <i class="fas fa-mobile-alt" style="font-size: 48px; margin-bottom: 16px; color: white;"></i>
+                <p style="color: white;"><strong>Mobile App Development</strong></p>
+                <p style="color: rgba(255,255,255,0.9);">iOS & Android</p>
+            </div>
+        </div>
+        
+        <div class="portfolio-content">
+            <div class="portfolio-header">
+                <div>
+                    <span class="portfolio-category">Mobile App</span>
+                    <h3 class="portfolio-title">Equipment Rental Platform</h3>
+                </div>
+            </div>
+            
+            <p class="portfolio-description">
+                Cross-platform mobile application for equipment rental business. Features include booking system, rental management, admin portal, and WhatsApp integration.
+            </p>
+            
+            <div style="margin-bottom: 24px;">
+                <div style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--gray-600);">
+                    <div>
+                        <i class="fab fa-android" style="color: var(--primary-blue); margin-right: 4px;"></i>
+                        Android
+                    </div>
+                    <div>
+                        <i class="fab fa-apple" style="color: var(--gray-600); margin-right: 4px;"></i>
+                        iOS
+                    </div>
+                    <div>
+                        <i class="fas fa-fire" style="color: #FFA000; margin-right: 4px;"></i>
+                        Firebase Backend
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-footer" style="border-top: none; padding-top: 0;">
+                <a href="https://wa.me/60187806530?text=Hi!%20I'm%20interested%20in%20mobile%20app%20development" class="btn btn-primary" style="width: 100%;">
+                    Get Mobile App Quote
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-section">
+        <div class="container">
+            <!-- Filter Buttons (optional) -->
+            <div style="text-align: center; margin-bottom: 40px;">
+                <button class="btn btn-secondary" style="margin: 0 8px;">All Projects</button>
+                <button class="btn btn-secondary" style="margin: 0 8px;">E-Commerce</button>
+                <button class="btn btn-secondary" style="margin: 0 8px;">Business Sites</button>
+                <button class="btn btn-secondary" style="margin: 0 8px;">Web Apps</button>
+            </div>
+            
+            <!-- Portfolio Projects -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+                <% portfolioProjects.forEach(project => { %>
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="<%= project.images.hero %>" alt="<%= project.title %>" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <div class="portfolio-content">
+                            <div class="portfolio-header">
+                                <div>
+                                    <span class="portfolio-category"><%= project.category %></span>
+                                    <h3 class="portfolio-title"><%= project.title %></h3>
+                                </div>
+                            </div>
+                            
+                            <p class="portfolio-description">
+                                <%= project.shortDescription %>
+                            </p>
+                            
+                            <div style="margin-bottom: 24px;">
+                                <div style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--gray-600);">
+                                    <div>
+                                        <i class="fas fa-palette" style="color: var(--primary-blue); margin-right: 4px;"></i>
+                                        <%= project.category %>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-lightbulb" style="color: var(--success-green); margin-right: 4px;"></i>
+                                        Concept Showcase
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-footer" style="border-top: none; padding-top: 0;">
+                                <a href="/portfolio/<%= project.id %>" class="btn btn-primary" style="width: 100%;">
+                                    View Design Showcase
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+                
+                <!-- Add more placeholder projects to show variety -->
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="image-label">
+                            <i class="fas fa-briefcase" style="font-size: 48px; margin-bottom: 16px;"></i>
+                            <p><strong>Coming Soon</strong></p>
+                            <p>Business Consulting Site</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <div>
+                                <span class="portfolio-category">Business</span>
+                                <h3 class="portfolio-title">Strategic Advisors Inc.</h3>
+                            </div>
+                        </div>
+                        
+                        <p class="portfolio-description">
+                            Professional consulting firm website with appointment booking and client portal.
+                        </p>
+                        
+                        <div style="margin-bottom: 24px;">
+                            <div style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--gray-600);">
+                                <div>
+                                    <i class="fas fa-clock" style="color: var(--primary-blue); margin-right: 4px;"></i>
+                                    7 days
+                                </div>
+                                <div>
+                                    <i class="fas fa-tag" style="color: var(--success-green); margin-right: 4px;"></i>
+                                    $1,299
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-footer" style="border-top: none; padding-top: 0;">
+                            <button class="btn btn-secondary" style="width: 100%;" disabled>
+                                Coming Soon
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <div class="image-label">
+                            <i class="fas fa-dumbbell" style="font-size: 48px; margin-bottom: 16px;"></i>
+                            <p><strong>Coming Soon</strong></p>
+                            <p>Fitness Studio Website</p>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-content">
+                        <div class="portfolio-header">
+                            <div>
+                                <span class="portfolio-category">Health & Fitness</span>
+                                <h3 class="portfolio-title">FitLife Studio</h3>
+                            </div>
+                        </div>
+                        
+                        <p class="portfolio-description">
+                            Modern fitness studio site with class scheduling and membership management.
+                        </p>
+                        
+                        <div style="margin-bottom: 24px;">
+                            <div style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--gray-600);">
+                                <div>
+                                    <i class="fas fa-clock" style="color: var(--primary-blue); margin-right: 4px;"></i>
+                                    10 days
+                                </div>
+                                <div>
+                                    <i class="fas fa-tag" style="color: var(--success-green); margin-right: 4px;"></i>
+                                    $1,799
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-footer" style="border-top: none; padding-top: 0;">
+                            <button class="btn btn-secondary" style="width: 100%;" disabled>
+                                Coming Soon
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Be Our Next Success Story?</h2>
+                <p>
+                    Let's create something amazing together. Your business deserves 
+                    a website that drives real results.
+                </p>
+                <div class="cta-buttons">
+                    <a href="/contact" class="btn btn-white">
+                        <i class="fas fa-rocket"></i>
+                        Start Your Project
+                    </a>
+                    <a href="/#pricing" class="btn btn-secondary" style="background: transparent; border: 2px solid white; color: white;">
+                        <i class="fas fa-tag"></i>
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <%- include('partials/footer') %>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

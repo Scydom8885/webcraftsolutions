@@ -1,0 +1,124 @@
+</main>
+
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand-section">
+                <h3 class="footer-brand">WebCraft Solutions</h3>
+                <p class="footer-description">
+                    Web & App Development <br> Let's build something amazing together!
+                </p>
+            </div>
+
+            <div class="footer-contact-section">
+                <!-- <h4 class="footer-section-title">Get In Touch</h4> -->
+                <div class="contact-info">
+                    <a href="mailto:webcraftsolutions2u@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>webcraftsolutions2u@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/60187806530" class="contact-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Available</span>
+                    </a>
+                    <a href="https://www.facebook.com/webcraftsolutions/" target="_blank" class="contact-link">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; 2025 WebCraft Solutions. All rights reserved.
+            </p>
+            <!-- <p class="tagline">
+                <i class="fas fa-heart"></i> Crafted with code and passion from Malaysia 🇲🇾
+            </p> -->
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/60187806530?text=Hi%20WebCraft%20Solutions!%20I'm%20interested%20in%20getting%20a%20quotation%20for%20" 
+   class="whatsapp-float" 
+   target="_blank"
+   aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<style>
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    animation: pulse-whatsapp 2s infinite;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.8), 0 0 0 10px rgba(37, 211, 102, 0.2), 0 0 0 20px rgba(37, 211, 102, 0.1);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+        top: 750px;
+       
+        right: 20px;
+    }
+}
+</style>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            }
+        });
+    }
+</script>
+</body>
+</html>
