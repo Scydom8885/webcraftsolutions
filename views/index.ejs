@@ -355,8 +355,8 @@
 
         // Entrance Animations on Scroll
         const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.1,
+            rootMargin: '0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -368,9 +368,17 @@
             });
         }, observerOptions);
 
-        // Observe hero image
+        // Observe hero image - trigger immediately if already visible
         const heroImage = document.querySelector('.hero-image img');
-        if (heroImage) observer.observe(heroImage);
+        if (heroImage) {
+            observer.observe(heroImage);
+            // Check if already in viewport on page load
+            const rect = heroImage.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isVisible) {
+                setTimeout(() => heroImage.classList.add('animate'), 100);
+            }
+        }
 
         // Observe service icons with stagger
         const serviceIcons = document.querySelectorAll('.service-icon');
