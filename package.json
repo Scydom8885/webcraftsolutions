@@ -1,7 +1,7 @@
 {
   "name": "web-craft-solutions",
   "version": "1.0.0",
-  "description": "Professional web development portfolio for Web Craft Solutions - Targeting U.S. businesses",
+  "description": "Professional web development portfolio for WebCraft Solution - Targeting worldwide business",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -15,7 +15,7 @@
     "ecoshop",
     "web-craft-solutions"
   ],
-  "author": "Web Craft Solutions",
+  "author": "WebCraft Solution",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",

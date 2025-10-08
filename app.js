@@ -96,15 +96,15 @@ const portfolioProjects = [
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('index', { 
-    pageTitle: 'Web Craft Solutions | Professional Web Development for Businesses',
+  res.render('index', {
+    pageTitle: 'WebCraft Solution | Professional Web & App Development for Businesses',
     portfolioProjects: portfolioProjects.filter(p => p.featured)
   });
 });
 
 app.get('/portfolio', (req, res) => {
-  res.render('portfolio', { 
-    pageTitle: 'Our Portfolio | Web Craft Solutions',
+  res.render('portfolio', {
+    pageTitle: 'Our Portfolio | WebCraft Solution',
     portfolioProjects
   });
 });
@@ -113,11 +113,11 @@ app.get('/portfolio/:id', (req, res) => {
   const project = portfolioProjects.find(p => p.id === req.params.id);
   if (!project) {
     return res.status(404).render('404', {
-      pageTitle: 'Project Not Found | Web Craft Solutions'
+      pageTitle: 'Project Not Found | WebCraft Solution'
     });
   }
-  res.render('project-detail', { 
-    pageTitle: `${project.title} | Web Craft Solutions Portfolio`,
+  res.render('project-detail', {
+    pageTitle: `${project.title} | WebCraft Solution Portfolio`,
     project
   });
 });
@@ -129,8 +129,8 @@ app.get('/price',(req,res) => {
 })
 
 app.get('/contact', (req, res) => {
-  res.render('contact', { 
-    pageTitle: 'Contact Us | Web Craft Solutions'
+  res.render('contact', {
+    pageTitle: 'Contact Us | WebCraft Solution'
   });
 });
 
@@ -147,12 +147,12 @@ app.post('/contact', (req, res) => {
 // 404 handler
 app.use((req, res) => {
   res.status(404).render('404', {
-    pageTitle: 'Page Not Found | Web Craft Solutions'
+    pageTitle: 'Page Not Found | WebCraft Solution'
   });
 });
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Web Craft Solutions server running on http://localhost:${PORT}`);
+  console.log(`🚀 WebCraft Solution server running on http://localhost:${PORT}`);
   console.log(`💼 Ready to showcase amazing portfolios!`);
 });
