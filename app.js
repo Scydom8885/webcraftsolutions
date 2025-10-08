@@ -56,6 +56,41 @@ const portfolioProjects = [
     },
     liveUrl: 'https://ecoshop-demo.com',
     featured: true
+  },
+  {
+    id: 'braisedporkking',
+    title: 'Braised Pork King',
+    category: 'F&B Website',
+    client: 'Restaurant Business',
+    shortDescription: 'A delicious restaurant website showcasing authentic braised pork dishes.',
+    fullDescription: 'A comprehensive restaurant website designed to showcase authentic braised pork dishes and create an appetizing online presence for the business.',
+    mobileDescription: 'Restaurant website for Braised Pork King - showcasing authentic dishes.',
+    features: [
+      'Menu showcase',
+      'Online ordering',
+      'Location & hours',
+      'Photo gallery',
+      'Customer testimonials',
+    ],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    designFeatures: [
+      'Appetizing food photography',
+      'Mobile-first responsive design',
+      'Easy-to-navigate menu',
+      'Fast loading optimized images'
+    ],
+    designPhilosophy: {
+      text: "This design focuses on making visitors hungry through beautiful food photography and easy navigation to drive orders.",
+      approach: "Visual-First Design",
+      focus: "Conversion & Appetite Appeal"
+    },
+    images: {
+      hero: '/images/portfolio2/bpk_bpk_desktop.webp',
+      heroMobile: '/images/portfolio2/bpk_bpk_mobile.webp',
+      heroDesktop: '/images/portfolio2/bpk_bpk_desktop.webp',
+    },
+    liveUrl: '#',
+    featured: true
   }
 ];
 
