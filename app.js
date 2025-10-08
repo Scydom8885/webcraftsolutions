@@ -47,10 +47,12 @@ const portfolioProjects = [
     },
     images: {
       hero: '/images/portfolio1/ecoshop-hero.png',
+      heroMobile: '/images/portfolio1/ecoshop-hero-mobile.webp',
+      heroDesktop: '/images/portfolio1/ecoshop-hero-desktop.webp',
       desktop: '/images/portfolio1/ecoshop-desktop.png',
       mobile: '/images/portfolio1/ecoshop-mobile.png',
       dashboard: '/images/portfolio1/ecoshop-dashboard.png',
-      
+
     },
     liveUrl: 'https://ecoshop-demo.com',
     featured: true

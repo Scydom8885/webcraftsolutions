@@ -188,7 +188,10 @@
                     <% portfolioProjects.forEach(project => { %>
                         <div class="portfolio-item">
                             <div class="portfolio-item-image">
-                                <img src="<%= project.images.hero %>" alt="<%= project.title %>">
+                                <picture>
+                                    <source media="(min-width: 768px)" srcset="<%= project.images.heroDesktop %>">
+                                    <img src="<%= project.images.heroMobile %>" alt="<%= project.title %>">
+                                </picture>
                             </div>
                             <div class="portfolio-item-info">
                                 <span class="portfolio-badge"><%= project.category %></span>
