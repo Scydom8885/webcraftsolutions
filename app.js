@@ -60,7 +60,7 @@ const portfolioProjects = [
   {
     id: 'braisedporkking',
     title: 'Braised Pork King',
-    category: 'F&B Website',
+    category: 'Web Application',
     client: 'Restaurant Business',
     shortDescription: 'A delicious restaurant website showcasing authentic braised pork dishes.',
     fullDescription: 'A comprehensive restaurant website designed to showcase authentic braised pork dishes and create an appetizing online presence for the business.',
