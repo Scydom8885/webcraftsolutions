@@ -3,41 +3,45 @@
     <!-- Footer -->
 <footer class="footer">
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand-section">
-                <h3 class="footer-brand">WebCraft Solution</h3>
-                <p class="footer-description">
-                    Web & App Development <br> Let's build something amazing together!
-                </p>
-            </div>
+        <div class="footer-content-centered">
 
-            <div class="footer-contact-section">
-                <!-- <h4 class="footer-section-title">Get In Touch</h4> -->
-                <div class="contact-info">
-                    <a href="mailto:webcraftsolutions2u@gmail.com" class="contact-link">
+            <!-- Quick Links Section -->
+            <!-- <div class="footer-section">
+                <h4 class="footer-label">QUICK LINKS</h4>
+                <div class="footer-links-horizontal">
+                    <a href="#services">Services</a>
+                    <span class="link-divider">•</span>
+                    <a href="#portfolio">Portfolio</a>
+                    <span class="link-divider">•</span>
+                    <a href="#why">Why Choose Us</a>
+                </div>
+            </div> -->
+
+  <div class="footer-bottom">
+            <p class="copyright">
+                &copy; 2026 WebCraft Solution. All rights reserved.
+            </p>
+        </div>
+            <!-- Contact Section -->
+            <div class="footer-section">
+                <h4 class="footer-label">CONNECT WITH US</h4>
+                <div class="footer-contact-icons">
+                    <a href="mailto:webcraftsolutions2u@gmail.com" class="footer-icon-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
-                        <span>webcraftsolutions2u@gmail.com</span>
                     </a>
-                    <a href="https://wa.me/60187806530" class="contact-link" target="_blank">
+                    <a href="https://wa.me/60187806530" class="footer-icon-link" target="_blank" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp Available</span>
                     </a>
-                    <a href="https://www.facebook.com/webcraftsolutions/" target="_blank" class="contact-link">
+                    <a href="https://www.facebook.com/webcraftsolutions/" target="_blank" class="footer-icon-link" aria-label="Facebook">
                         <i class="fab fa-facebook"></i>
-                        <span>Facebook</span>
                     </a>
                 </div>
             </div>
+
         </div>
 
-        <div class="footer-bottom">
-            <p class="copyright">
-                &copy; 2025 WebCraft Solution. All rights reserved.
-            </p>
-            <!-- <p class="tagline">
-                <i class="fas fa-heart"></i> Crafted with code and passion from Malaysia 🇲🇾
-            </p> -->
-        </div>
+           
+       
     </div>
 </footer>
 
@@ -92,7 +96,7 @@
         width: 55px;
         height: 55px;
         font-size: 28px;
-        bottom: 20px;
+        bottom: 90px;
         right: 20px;
     }
 }
@@ -103,19 +107,49 @@
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
-    
+
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             this.classList.toggle('active');
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!mobileMenuBtn.contains(e.target) && !navMenu.contains(e.target)) {
                 navMenu.classList.remove('active');
                 mobileMenuBtn.classList.remove('active');
             }
+        });
+    }
+
+    // Services Dropdown Toggle Script (Desktop only)
+    const servicesDropdownBtn = document.getElementById('servicesDropdownBtn');
+    const servicesDropdownMenu = document.getElementById('servicesDropdownMenu');
+
+    if (servicesDropdownBtn && servicesDropdownMenu) {
+        servicesDropdownBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            servicesDropdownBtn.classList.toggle('active');
+            servicesDropdownMenu.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!servicesDropdownBtn.contains(e.target) && !servicesDropdownMenu.contains(e.target)) {
+                servicesDropdownBtn.classList.remove('active');
+                servicesDropdownMenu.classList.remove('active');
+            }
+        });
+
+        // Close dropdown when clicking a dropdown link
+        const dropdownLinks = servicesDropdownMenu.querySelectorAll('.dropdown-link');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                servicesDropdownBtn.classList.remove('active');
+                servicesDropdownMenu.classList.remove('active');
+            });
         });
     }
 </script>

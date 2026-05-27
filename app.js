@@ -122,6 +122,24 @@ app.get('/portfolio/:id', (req, res) => {
   });
 });
 
+app.get('/webapp', (req, res) => {
+  res.render('webapp', {
+    pageTitle: 'Web Application Development | WebCraft Solution'
+  });
+});
+
+app.get('/mobileapp', (req, res) => {
+  res.render('mobileapp', {
+    pageTitle: 'Mobile App Development | WebCraft Solution'
+  });
+});
+
+app.get('/web', (req, res) => {
+  res.render('web', {
+    pageTitle: 'Website Development | WebCraft Solution'
+  });
+});
+
 app.get('/price',(req,res) => {
   res.render('price',{
     pageTitle:'Package Plan | Pricing | Quatation '
